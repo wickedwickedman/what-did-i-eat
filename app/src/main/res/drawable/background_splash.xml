@@ -7,7 +7,7 @@
             />
     </item>
     <item
-        android:drawable="@drawable/icon2"
+        android:drawable="@drawable/icon3"
         android:gravity="center_vertical|center_horizontal"
         android:height="@android:dimen/thumbnail_height"
         android:width="@android:dimen/thumbnail_width"
