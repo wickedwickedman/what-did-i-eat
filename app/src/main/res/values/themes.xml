@@ -5,9 +5,23 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/background_splash</item>
+    <!--SplashTheme-->
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        // Set the splash screen background, animated icon, and animation duration.
+        <item name="windowSplashScreenBackground">@color/white</item>
+
+        // Use windowSplashScreenAnimatedIcon to add either a drawable or an
+        // animated drawable. One of these is required.
+        <item name="windowSplashScreenAnimatedIcon">@drawable/icon2</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+
+        // Set the theme of the Activity that directly follows your splash screen.
+        <item name="postSplashScreenTheme">@style/BasicTheme</item>
     </style>
+
+<!--    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">-->
+<!--        <item name="android:windowBackground">@drawable/background_splash</item>-->
+<!--    </style>-->
 
     <style name="Base.Theme.WhatDidIEat.Fullscreen" parent="Base.Theme.WhatDidIEat">
         <item name="android:actionBarStyle">

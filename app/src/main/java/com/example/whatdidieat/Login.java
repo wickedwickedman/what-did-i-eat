@@ -1,6 +1,7 @@
 package com.example.whatdidieat;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
