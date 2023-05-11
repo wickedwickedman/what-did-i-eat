@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        signup = findViewById(R.id.signupbutton);
+        signup = findViewById(R.id.signupButton);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,11 +41,14 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        login = findViewById(R.id.loginbutton);
+
+        login = findViewById(R.id.loginButton);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), List.class);
+                startActivity(intent);
             }
         });
     }
