@@ -22,7 +22,8 @@ public class Upload extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                Intent intent = new Intent(getApplicationContext(), List.class);
+                startActivity(intent);
             }
         });
 
