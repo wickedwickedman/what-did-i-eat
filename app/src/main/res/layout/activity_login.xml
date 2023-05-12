@@ -73,7 +73,7 @@
             android:layout_height="35dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/box_login"
+            android:background="@drawable/box_id"
             android:text="로그인"
             android:textColor="@color/black"
             android:textSize="16dp"
@@ -82,7 +82,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signupButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/box_id"

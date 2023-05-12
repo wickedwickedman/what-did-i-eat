@@ -38,20 +38,21 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="7dp"
                     android:text="이름"
                     android:textColor="@color/black_overlay"
                     android:textSize="16dp"
@@ -61,7 +62,7 @@
                     android:id="@+id/signName"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="25dp"
                     android:background="@drawable/box_id"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -71,7 +72,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="7dp"
                     android:text="아이디"
                     android:textColor="@color/black_overlay"
                     android:textSize="16dp"
@@ -81,7 +82,7 @@
                     android:id="@+id/signID"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="25dp"
                     android:background="@drawable/box_id"
                     android:ems="10"
                     android:hint=" 6~20자"
@@ -92,71 +93,38 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="7dp"
                     android:text="생년월일"
                     android:textColor="@color/black_overlay"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/signBirth"
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/box_id"
-                        android:ems="10"
-                        android:hint=" 년"
-                        android:inputType="numberDecimal"
-                        android:maxLength="4"
-                        android:text="" />
-
-                    <EditText
-                        android:id="@+id/signBirth2"
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/box_id"
-                        android:ems="10"
-                        android:hint=" 월"
-                        android:inputType="numberDecimal"
-                        android:maxLength="2"
-                        android:text="" />
-
-                    <EditText
-                        android:id="@+id/signBirth3"
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/box_id"
-                        android:ems="10"
-                        android:hint=" 일"
-                        android:inputType="numberDecimal"
-                        android:maxLength="2"
-                        android:text="" />
-                </LinearLayout>
+                <EditText
+                    android:id="@+id/signBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/box_id"
+                    android:ems="10"
+                    android:hint=" ex)19990101"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:text="" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="7dp"
                     android:text="비밀번호"
                     android:textColor="@color/black_overlay"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 
-
                 <EditText
                     android:id="@+id/signPW"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="25dp"
                     android:background="@drawable/box_id"
                     android:ems="10"
                     android:hint=" 8~20자"
@@ -167,35 +135,28 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="7dp"
                     android:text="비밀번호 확인"
                     android:textColor="@color/black_overlay"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/signPW2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/box_id"
-                        android:ems="10"
-                        android:hint=" 비밀번호 재입력"
-                        android:inputType="textPassword"
-                        android:maxLength="20"
-                        android:text="" />
-
-                </LinearLayout>
+                <EditText
+                    android:id="@+id/signPW2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/box_id"
+                    android:ems="10"
+                    android:hint=" 비밀번호 재입력"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:text="" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="7dp"
                     android:text="이메일"
                     android:textColor="@color/black_overlay"
                     android:textSize="16dp"
@@ -205,7 +166,7 @@
                     android:id="@+id/signMail"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="25dp"
                     android:background="@drawable/box_id"
                     android:ems="15"
                     android:hint=" ex)pickeatup@google.com"
@@ -213,20 +174,25 @@
                     android:maxLength="30"
                     android:text="" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/signupbutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/box_login"
-                    android:text="회원가입"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
             </LinearLayout>
         </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/signupButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="회원가입"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box_filled_text"
+                />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

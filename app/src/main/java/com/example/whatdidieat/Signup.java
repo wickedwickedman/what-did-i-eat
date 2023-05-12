@@ -20,10 +20,8 @@ public class Signup extends AppCompatActivity {
     EditText pw;
     EditText pw2;
     EditText email;
-    EditText birthYear;
-    EditText birthMonth;
-    EditText birthDay;
-    Button submit;
+    EditText birth;
+    TextView submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +43,10 @@ public class Signup extends AppCompatActivity {
         pw = findViewById(R.id.signPW);
         pw2 = findViewById(R.id.signPW2);
         email = findViewById(R.id.signMail);
-        birthYear = findViewById(R.id.signBirth);
-        birthMonth = findViewById(R.id.signBirth2);
-        birthDay = findViewById(R.id.signBirth3);
+        birth = findViewById(R.id.signBirth);
 
         //회원가입 완료 버튼
-        submit = findViewById(R.id.signupbutton);
+        submit = findViewById(R.id.signupButton);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,13 +77,8 @@ public class Signup extends AppCompatActivity {
         }
 
         // 생년월일 유효성 검사
-        if(birthYear.getText().toString().length() >= 1 && birthMonth.getText().toString().length() >= 1 && birthDay.getText().toString().length() >= 1) {
-            if (Integer.parseInt(birthYear.getText().toString()) <= 2023 &&
-                    1900 <= Integer.parseInt(birthYear.getText().toString()) &&
-                    1 <= Integer.parseInt(birthMonth.getText().toString()) &&
-                    12 >= Integer.parseInt(birthMonth.getText().toString()) &&
-                    1 <= Integer.parseInt(birthDay.getText().toString()) &&
-                    31 >= Integer.parseInt(birthDay.getText().toString())) {
+        if(birth.getText().toString().length() >= 1) {
+            if (19000101 <= Integer.parseInt(birth.getText().toString()) && Integer.parseInt(birth.getText().toString()) <= 20230101) {
                 birthFlag = true;
             } else {
                 birthFlag = false;

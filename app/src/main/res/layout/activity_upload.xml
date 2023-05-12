@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/outline_add_24" />
+                android:src="@drawable/outline_add_24" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -90,10 +90,10 @@
                 android:textSize="20dp"
                 android:gravity="center"
                 android:paddingTop="3dp"
-                android:paddingBottom="3dp"
+                android:paddingBottom="10dp"
                 android:paddingRight="3dp"
                 android:paddingLeft="3dp"
-                android:background="@drawable/box_text"/>
+                android:background="@drawable/box_id"/>
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -101,8 +101,7 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:paddingRight="10dp"
-                android:paddingLeft="10dp"
-                android:background="@drawable/box_text">
+                android:paddingLeft="10dp">
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -113,20 +112,22 @@
             </ScrollView>
 
         </LinearLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/writeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/box_login"
-            android:text="작성하기"
-            android:textSize="18dp" />
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/writeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="작성하기"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box_filled_text"
+                />
+        </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>
