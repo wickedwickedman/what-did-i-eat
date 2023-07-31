@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">WhatDidIEat</string>
-    <string name="title_activity_login">WhatDidIEat</string>
+    <string name="app_name">뭐먹었지</string>
+    <string name="title_activity_login">뭐먹었지</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string-array name="photo">
+        <item>앨범에서 사진 선택</item>
+        <item>카메라로 사진 촬영</item>
+    </string-array>
 </resources>

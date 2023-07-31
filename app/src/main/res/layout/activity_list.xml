@@ -2,57 +2,67 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/back"
+                android:id="@+id/infoButton"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:paddingLeft="10dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
                 android:paddingRight="10dp"
-                android:src="@drawable/baseline_arrow_back_24" />
+                android:src="@drawable/button_info" />
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="150dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:src="@drawable/logo3"-->
+            <!--                />-->
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="\t다이어리 목록"
-                android:textColor="@color/black"
+                android:id="@+id/listTextView"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:textSize="25dp" />
+                android:ellipsize="marquee"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="다이어리 목록"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
 
             <ImageView
                 android:id="@+id/uploadButton"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/outline_add_24" />
+                android:src="@drawable/diaryicon" />
         </LinearLayout>
     </LinearLayout>
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/diary"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/diary"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </ScrollView>
+            android:layout_height="match_parent"
+            android:fontFamily="@font/regular" />
+    </LinearLayout>
 </LinearLayout>

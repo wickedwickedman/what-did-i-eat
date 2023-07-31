@@ -4,18 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:theme="@style/BasicTheme"
     android:orientation="vertical"
+    android:theme="@style/BasicTheme"
     tools:context=".Signup">
 
     <LinearLayout
+        android:id="@+id/signupLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
@@ -24,14 +25,17 @@
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingLeft="10dp"
+                android:paddingLeft="15dp"
                 android:paddingRight="10dp"
-                android:src="@drawable/baseline_arrow_back_24" />
+                android:src="@drawable/button_back" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="\t회원 가입"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="회원 가입"
                 android:textColor="@color/black"
                 android:textSize="25dp" />
         </LinearLayout>
@@ -42,6 +46,7 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/signupLinearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
@@ -53,126 +58,138 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/medium"
                     android:text="이름"
                     android:textColor="@color/black_overlay"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
 
                 <EditText
                     android:id="@+id/signName"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginBottom="25dp"
-                    android:background="@drawable/box_id"
+                    android:background="@drawable/box_gray_underline"
                     android:ems="10"
+                    android:fontFamily="@font/regular"
                     android:inputType="textPersonName"
                     android:maxLength="10"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/medium"
                     android:text="아이디"
                     android:textColor="@color/black_overlay"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
 
                 <EditText
                     android:id="@+id/signID"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginBottom="25dp"
-                    android:background="@drawable/box_id"
+                    android:background="@drawable/box_gray_underline"
                     android:ems="10"
-                    android:hint=" 6~20자"
+                    android:fontFamily="@font/regular"
+                    android:hint="6~20자"
                     android:inputType="text"
                     android:maxLength="20"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/medium"
                     android:text="생년월일"
                     android:textColor="@color/black_overlay"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
 
                 <EditText
                     android:id="@+id/signBirth"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginBottom="25dp"
-                    android:background="@drawable/box_id"
+                    android:background="@drawable/box_gray_underline"
                     android:ems="10"
-                    android:hint=" ex)19990101"
+                    android:fontFamily="@font/regular"
+                    android:hint="19990101"
                     android:inputType="numberDecimal"
                     android:maxLength="8"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/medium"
                     android:text="비밀번호"
                     android:textColor="@color/black_overlay"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
 
                 <EditText
                     android:id="@+id/signPW"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginBottom="25dp"
-                    android:background="@drawable/box_id"
+                    android:background="@drawable/box_gray_underline"
                     android:ems="10"
-                    android:hint=" 8~20자"
+                    android:fontFamily="@font/regular"
+                    android:hint="8~20자"
                     android:inputType="textPassword"
                     android:maxLength="20"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/medium"
                     android:text="비밀번호 확인"
                     android:textColor="@color/black_overlay"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
 
                 <EditText
                     android:id="@+id/signPW2"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginBottom="25dp"
-                    android:background="@drawable/box_id"
+                    android:background="@drawable/box_gray_underline"
                     android:ems="10"
-                    android:hint=" 비밀번호 재입력"
+                    android:fontFamily="@font/regular"
+                    android:hint="비밀번호 재입력"
                     android:inputType="textPassword"
                     android:maxLength="20"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/medium"
                     android:text="이메일"
                     android:textColor="@color/black_overlay"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
 
                 <EditText
                     android:id="@+id/signMail"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginBottom="25dp"
-                    android:background="@drawable/box_id"
+                    android:background="@drawable/box_gray_underline"
                     android:ems="15"
-                    android:hint=" ex)pickeatup@google.com"
+                    android:fontFamily="@font/regular"
+                    android:hint="hello@google.com"
                     android:inputType="textEmailAddress"
                     android:maxLength="30"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@color/black" />
 
             </LinearLayout>
         </ScrollView>
@@ -180,19 +197,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <TextView
+
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/signupButton"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:background="@drawable/box_blue"
+                android:fontFamily="@font/medium"
                 android:gravity="center"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                 android:text="회원가입"
-                android:textSize="20dp"
                 android:textColor="@color/white"
-                android:background="@drawable/box_filled_text"
-                />
+                android:textSize="18dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
